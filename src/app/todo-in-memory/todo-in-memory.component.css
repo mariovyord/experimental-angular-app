@@ -1,13 +1,16 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-}
-
 .todo-wrapper {
     display: flex;
     gap: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
 }
 
 .todo-wrapper button {

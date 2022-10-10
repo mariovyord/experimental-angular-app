@@ -1,7 +1,8 @@
 <div class="todo-wrapper">
-    <app-todo-list *ngFor="let list of todoService.todoLists" [list]="list"></app-todo-list>
+    <app-todo-list *ngFor="let list of todoService.todoLists; let i = index;" [index]="i" [list]="list"></app-todo-list>
     <mat-card class="form">
         <mat-card-title>Add new list</mat-card-title>
+        <mat-card-subtitle>All fields are required</mat-card-subtitle>
         <mat-form-field>
             <mat-label>List title</mat-label>
             <input matInput name="title" [(ngModel)]="title">

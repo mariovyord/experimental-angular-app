@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { TodoList } from 'src/models/TodoList';
+import { Component } from '@angular/core';
 import { TodosService } from './todos.service';
 
 @Component({
@@ -15,6 +14,10 @@ export class TodoInMemoryComponent {
     constructor(public todoService: TodosService) { }
 
     handleAddList() {
-        this.todoService.handleCreateList(this.title, this.description);
+        if (this.title !== '' && this.description !== '') {
+            this.todoService.createList(this.title, this.description);
+            this.title = '';
+            this.description = '';
+        }
     }
 }

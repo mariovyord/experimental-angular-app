@@ -9,12 +9,16 @@ export class TodosService {
         return [...this._todoLists]
     }
 
-    handleCreateList(title: string, description: string) {
+    createList(title: string, description: string) {
         const newTodo = new TodoList(title, description);
         this._todoLists.push(newTodo);
     }
 
     handleDeleteList(index: number) {
         this._todoLists.splice(index, 1);
+    }
+
+    addTesk(listIndex: number, newTask: string) {
+        this._todoLists[listIndex].todos.push(newTask);
     }
 }
