@@ -1,0 +1,14 @@
+<mat-card class="list-wrapper">
+    <mat-card-title>Tasks 1</mat-card-title>
+    <mat-card-subtitle>Web Dev tasks</mat-card-subtitle>
+    <mat-card-content>
+        <p *ngFor="let todo of list.todos">{{todo}}</p>
+    </mat-card-content>
+    <div class="form">
+        <mat-form-field appearance="fill">
+            <mat-label>New task</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Add</button>
+    </div>
+</mat-card>

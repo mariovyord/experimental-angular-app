@@ -1,1 +1,15 @@
-<p>todo-in-memory works!</p>
+<div class="todo-wrapper">
+    <app-todo-list *ngFor="let list of todoService.todoLists" [list]="list"></app-todo-list>
+    <mat-card class="form">
+        <mat-card-title>Add new list</mat-card-title>
+        <mat-form-field>
+            <mat-label>List title</mat-label>
+            <input matInput name="title" [(ngModel)]="title">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>List description</mat-label>
+            <input matInput name="description" [(ngModel)]="description">
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="handleAddList()">Add new list</button>
+    </mat-card>
+</div>

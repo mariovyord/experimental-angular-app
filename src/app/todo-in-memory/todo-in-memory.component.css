@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.todo-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-wrapper button {
+    height: fit-content;
+}
