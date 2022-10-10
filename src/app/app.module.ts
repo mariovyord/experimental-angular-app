@@ -11,7 +11,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomeComponent } from './home/home.component';
 import { TodoInMemoryComponent } from './todo-in-memory/todo-in-memory.component';
@@ -36,7 +35,6 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
         MatToolbarModule,
         MatSidenavModule,
         MatListModule,
-        FlexLayoutModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

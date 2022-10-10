@@ -1,10 +1,10 @@
-<mat-toolbar color="primary">
-    <div fxShow fxHide.gt-sm>
+<mat-toolbar class="navbar" color="primary">
+    <div class="sidebar-icon">
         <button mat-icon-button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
         </button>
     </div>
-    <div fxHide fxShow.gt-sm class="navigation-items">
+    <div class="navigation-items">
         <div>
             <a mat-button routerLink="/">
                 <mat-icon>home</mat-icon>
@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="spacer"></div>
-        <ul fxLayout fxLayoutGap="15px">
+        <ul>
             <li>
                 <a mat-button routerLink="/todo_(in_memory)">
                     <mat-icon>fact_check</mat-icon>
