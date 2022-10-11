@@ -1,5 +1,5 @@
 <mat-card (mouseover)="showButton = true" (mouseleave)="showButton = false" class="todo-card"
-    [ngClass]="{'finished': todo.finished}">
+    [ngClass]="{'finished': todo.finished}" aria-label="Task that you can mark as finished on click">
     <span>{{todo.description}}</span>
     <mat-icon (click)="handleDeleteTodo()" *ngIf="showButton" class="delete-icon" #tooltip="matTooltip"
         matTooltip="Delete" matTooltipPosition="left" matTooltipHideDelay="100"

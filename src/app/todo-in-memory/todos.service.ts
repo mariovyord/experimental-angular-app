@@ -21,7 +21,7 @@ export class TodosService {
         this._todoLists.push(newTodo);
     }
 
-    handleDeleteList(index: number) {
+    deleteList(index: number) {
         this._todoLists.splice(index, 1);
     }
 

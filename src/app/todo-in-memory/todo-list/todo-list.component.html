@@ -1,5 +1,13 @@
 <mat-card class="list-wrapper">
-    <mat-card-title>{{list.title}}</mat-card-title>
+    <mat-card-title class="title" (mouseover)="showButton = true" (mouseleave)="showButton = false">
+        <span>
+            {{list.title}}
+        </span>
+        <mat-icon (click)="handleDeleteList()" *ngIf="showButton" class="delete-icon" #tooltip="matTooltip"
+            matTooltip="Delete" matTooltipPosition="left" matTooltipHideDelay="100"
+            aria-label="Button that deletes todo task" style="cursor: pointer;">delete
+        </mat-icon>
+    </mat-card-title>
     <mat-card-subtitle>{{list.description}}</mat-card-subtitle>
     <mat-card-content class="todos-list">
         <app-todo-item *ngFor="let todo of list.todos; let i = index" [todo]="todo" (click)="handleFinishTodo(i)">

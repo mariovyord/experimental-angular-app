@@ -11,6 +11,7 @@ export class TodoListComponent {
     @Input() list: TodoList;
     @Input() index: number;
     newTask = '';
+    showButton = false;
 
     constructor(private todosService: TodosService) { }
 
@@ -25,5 +26,9 @@ export class TodoListComponent {
         const newList = [...this.list.todos];
         newList[todoIndex].finished = !newList[todoIndex].finished;
         this.todosService.changeTasks(this.index, newList);
+    }
+
+    handleDeleteList() {
+        this.todosService.deleteList(this.index);
     }
 }
