@@ -17,10 +17,3 @@
     gap: 5px;
 }
 
-.finished {
-    background-color: green;
-}
-
-.todo-card {
-    cursor: pointer;
-}

@@ -2,10 +2,8 @@
     <mat-card-title>{{list.title}}</mat-card-title>
     <mat-card-subtitle>{{list.description}}</mat-card-subtitle>
     <mat-card-content class="todos-list">
-        <mat-card class="todo-card" *ngFor="let todo of list.todos; let i = index"
-            [ngClass]="{'finished': todo.finished}" (click)="handleFinishTodo(i)">
-            {{todo.description}}
-        </mat-card>
+        <app-todo-item *ngFor="let todo of list.todos; let i = index" [todo]="todo" (click)="handleFinishTodo(i)">
+        </app-todo-item>
     </mat-card-content>
     <div class="form">
         <mat-form-field>

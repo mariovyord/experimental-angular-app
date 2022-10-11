@@ -1,0 +1,19 @@
+.finished {
+    background-color: green;
+}
+
+.todo-card {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+}
+
+.delete-icon {
+    font-size: 23px;
+}
+
+.delete-icon:hover {
+    color: darkred;
+}

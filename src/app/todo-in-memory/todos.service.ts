@@ -27,7 +27,13 @@ export class TodosService {
         this._todoLists[listIndex].todos.push(new Todo(taskDescription));
     }
 
-    finishTask(listIndex: number, newTodos: Todo[]) {
+    changeTasks(listIndex: number, newTodos: Todo[]) {
         this._todoLists[listIndex].todos = newTodos;
+    }
+
+    deleteTask(taskId: string) {
+        this._todoLists.forEach(list => {
+            list.todos = list.todos.filter(x => x.id !== taskId);
+        })
     }
 }

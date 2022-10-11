@@ -16,13 +16,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { HomeComponent } from './home/home.component';
 import { TodoInMemoryComponent } from './todo-in-memory/todo-in-memory.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { TodoListComponent } from './todo-in-memory/todo-list/todo-list.component';
-import { TodosService } from './todo-in-memory/todos.service';
+import { TodoItemComponent } from './todo-in-memory/todo-list/todo-item/todo-item.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { TodosService } from './todo-in-memory/todos.service';
         HeaderComponent,
         SidenavListComponent,
         TodoListComponent,
+        TodoItemComponent,
     ],
     imports: [
         BrowserModule,
@@ -48,6 +50,7 @@ import { TodosService } from './todo-in-memory/todos.service';
         MatInputModule,
         MatChipsModule,
         FormsModule,
+        MatTooltipModule
     ],
     providers: [],
     bootstrap: [AppComponent]

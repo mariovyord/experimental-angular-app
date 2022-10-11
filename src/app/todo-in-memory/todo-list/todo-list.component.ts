@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TodoList } from 'src/models/TodoList';
 import { TodosService } from '../todos.service';
 
@@ -11,6 +11,7 @@ export class TodoListComponent {
     @Input() list: TodoList;
     @Input() index: number;
     newTask = '';
+
     constructor(private todosService: TodosService) { }
 
     handleAddNewTask() {
@@ -23,6 +24,6 @@ export class TodoListComponent {
     handleFinishTodo(todoIndex: number) {
         const newList = [...this.list.todos];
         newList[todoIndex].finished = !newList[todoIndex].finished;
-        this.todosService.finishTask(this.index, newList);
+        this.todosService.changeTasks(this.index, newList);
     }
 }
