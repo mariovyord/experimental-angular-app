@@ -19,4 +19,10 @@ export class TodoListComponent {
             this.newTask = '';
         }
     }
+
+    handleFinishTodo(todoIndex: number) {
+        const newList = [...this.list.todos];
+        newList[todoIndex].finished = !newList[todoIndex].finished;
+        this.todosService.finishTask(this.index, newList);
+    }
 }

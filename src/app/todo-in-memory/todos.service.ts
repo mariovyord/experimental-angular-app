@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Todo } from 'src/models/Todo';
 import { TodoList } from 'src/models/TodoList';
 
 @Injectable()
 export class TodosService {
-    _todoLists: TodoList[] = []
+    _todoLists: TodoList[] = [{
+        title: 'Tasks 1',
+        description: 'Web Dev tasks',
+        todos: [new Todo('Fun'), new Todo('Games')]
+    }]
 
     get todoLists() {
         return [...this._todoLists]
@@ -18,7 +23,11 @@ export class TodosService {
         this._todoLists.splice(index, 1);
     }
 
-    addTesk(listIndex: number, newTask: string) {
-        this._todoLists[listIndex].todos.push(newTask);
+    addTesk(listIndex: number, taskDescription: string) {
+        this._todoLists[listIndex].todos.push(new Todo(taskDescription));
+    }
+
+    finishTask(listIndex: number, newTodos: Todo[]) {
+        this._todoLists[listIndex].todos = newTodos;
     }
 }
