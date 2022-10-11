@@ -25,6 +25,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { TodoListComponent } from './todo-in-memory/todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-in-memory/todo-list/todo-item/todo-item.component';
 import { ProjectCardComponent } from './home/project-card/project-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -36,6 +37,7 @@ import { ProjectCardComponent } from './home/project-card/project-card.component
         TodoListComponent,
         TodoItemComponent,
         ProjectCardComponent,
+        FooterComponent,
     ],
     imports: [
         BrowserModule,
