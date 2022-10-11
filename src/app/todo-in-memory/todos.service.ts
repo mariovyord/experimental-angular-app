@@ -4,11 +4,13 @@ import { TodoList } from 'src/models/TodoList';
 
 @Injectable()
 export class TodosService {
-    _todoLists: TodoList[] = [{
-        title: 'Tasks 1',
-        description: 'Web Dev tasks',
-        todos: [new Todo('Fun'), new Todo('Games')]
-    }]
+    _todoLists: TodoList[] = [
+        {
+            title: 'Tasks 1',
+            description: 'Web Dev tasks',
+            todos: [new Todo('Fun'), new Todo('Games')]
+        },
+    ]
 
     get todoLists() {
         return [...this._todoLists]
