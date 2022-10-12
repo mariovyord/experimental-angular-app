@@ -4,6 +4,8 @@ import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TaskDialogComponent, TaskDialogResult } from './task-dialog/task-dialog.component';
 import { Task } from './task.model';
 
+// https://developers.google.com/codelabs/building-a-web-app-with-angular-and-firebase
+
 @Component({
     selector: 'app-kanban-fire',
     templateUrl: './kanban-fire.component.html',
