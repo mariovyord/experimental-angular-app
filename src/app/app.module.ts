@@ -18,6 +18,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { HomeComponent } from './home/home.component';
 import { TodoInMemoryComponent } from './todo-in-memory/todo-in-memory.component';
 import { HeaderComponent } from './navigation/header/header.component';
@@ -26,6 +29,9 @@ import { TodoListComponent } from './todo-in-memory/todo-list/todo-list.componen
 import { TodoItemComponent } from './todo-in-memory/todo-list/todo-item/todo-item.component';
 import { ProjectCardComponent } from './home/project-card/project-card.component';
 import { FooterComponent } from './footer/footer.component';
+import { KanbanFireComponent } from './kanban-fire/kanban-fire.component';
+import { TaskComponent } from './kanban-fire/task/task.component';
+import { TaskDialogComponent } from './kanban-fire/task-dialog/task-dialog.component';
 
 @NgModule({
     declarations: [
@@ -38,6 +44,9 @@ import { FooterComponent } from './footer/footer.component';
         TodoItemComponent,
         ProjectCardComponent,
         FooterComponent,
+        KanbanFireComponent,
+        TaskComponent,
+        TaskDialogComponent,
     ],
     imports: [
         BrowserModule,
@@ -54,7 +63,9 @@ import { FooterComponent } from './footer/footer.component';
         MatInputModule,
         MatChipsModule,
         FormsModule,
-        MatTooltipModule
+        MatTooltipModule,
+        DragDropModule,
+        MatDialogModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

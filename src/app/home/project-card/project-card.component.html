@@ -1,16 +1,16 @@
 <mat-card class="card">
     <mat-card-header>
         <div mat-card-avatar class="header-image"></div>
-        <mat-card-title>To-Do App</mat-card-title>
-        <mat-card-subtitle>(in memory)</mat-card-subtitle>
+        <mat-card-title>{{project.title}}</mat-card-title>
+        <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="/assets/images/todo-500x280.png" alt="To-Do App screenshot">
+    <img mat-card-image [src]="project.imageUrl" [alt]="project.title + ' screenshot'">
     <mat-card-content>
         <p>
-            Simple To-Do App that stores item in memory. Lost on refresh.
+            {{project.content}}
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <a routerLink="/todo_(in_memory)" mat-raised-button color="primary">LINK</a>
+        <a [routerLink]="project.routerLink" mat-raised-button color="primary">LINK</a>
     </mat-card-actions>
 </mat-card>
