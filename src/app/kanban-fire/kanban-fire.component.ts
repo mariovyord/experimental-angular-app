@@ -10,34 +10,20 @@ import { Task } from './task.model';
     styleUrls: ['./kanban-fire.component.css']
 })
 export class KanbanFireComponent {
-    constructor(private dialog: MatDialog) { }
     todo: Task[] = [
         {
             title: 'Buy milk',
-            description: 'Go to the store and buy milk'
+            description: 'Go to the store and buy milk',
         },
         {
             title: 'Create a Kanban app',
-            description: 'Using Firebase and Angular create a Kanban app!'
-        }
+            description: 'Using Firebase and Angular create a Kanban app!',
+        },
     ];
     inProgress: Task[] = [];
     done: Task[] = [];
 
-    drop(event: CdkDragDrop<Task[]>): void {
-        if (event.previousContainer === event.container) {
-            return;
-        }
-        if (!event.container.data || !event.previousContainer.data) {
-            return;
-        }
-        transferArrayItem(
-            event.previousContainer.data,
-            event.container.data,
-            event.previousIndex,
-            event.currentIndex
-        );
-    }
+    constructor(private dialog: MatDialog) { }
 
     newTask(): void {
         const dialogRef = this.dialog.open(TaskDialogComponent, {
@@ -48,8 +34,8 @@ export class KanbanFireComponent {
         });
         dialogRef
             .afterClosed()
-            .subscribe((result: TaskDialogResult | undefined) => {
-                if (!result) {
+            .subscribe((result: TaskDialogResult) => {
+                if (!result || !result.task.title || !result.task.description) {
                     return;
                 }
                 this.todo.push(result.task);
@@ -64,7 +50,7 @@ export class KanbanFireComponent {
                 enableDelete: true,
             },
         });
-        dialogRef.afterClosed().subscribe((result: TaskDialogResult | undefined) => {
+        dialogRef.afterClosed().subscribe((result: TaskDialogResult) => {
             if (!result) {
                 return;
             }
@@ -76,5 +62,17 @@ export class KanbanFireComponent {
                 dataList[taskIndex] = task;
             }
         });
+    }
+
+    drop(event: CdkDragDrop<Task[]>): void {
+        if (event.previousContainer === event.container) {
+            return;
+        }
+        transferArrayItem(
+            event.previousContainer.data,
+            event.container.data,
+            event.previousIndex,
+            event.currentIndex
+        );
     }
 }

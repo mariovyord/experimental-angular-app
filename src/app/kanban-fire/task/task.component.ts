@@ -6,13 +6,7 @@ import { Task } from '../task.model';
     templateUrl: './task.component.html',
     styleUrls: ['./task.component.css']
 })
-export class TaskComponent implements OnInit {
+export class TaskComponent {
     @Input() task: Task | null = null;
     @Output() edit = new EventEmitter<Task>();
-
-    constructor() { }
-
-    ngOnInit(): void {
-    }
-
 }
