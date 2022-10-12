@@ -11,21 +11,21 @@ export class HomeComponent {
         {
             title: 'To-Do App',
             subtitle: '(in memory)',
-            imageUrl: '/assets/images/todo-500x280.png',
+            imageUrl: 'https://cdn.pixabay.com/photo/2018/02/21/05/17/cat-3169476_960_720.jpg',
             content: 'Its nice.',
             routerLink: '/todo_(in_memory)'
         },
         {
             title: 'Kanban Board',
             subtitle: 'with Firebase',
-            imageUrl: '/assets/images/kanban-500x280.png',
+            imageUrl: 'https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg',
             content: 'Kanban Board! Woohooo',
             routerLink: '/kanban'
         },
         {
             title: 'Hello World',
             subtitle: 'Hello... to the world',
-            imageUrl: '/assets/images/todo-500x280.png',
+            imageUrl: 'https://cdn.pixabay.com/photo/2022/10/07/09/24/little-panda-7504633_960_720.jpg',
             content: 'Not much, but from the heart.',
             routerLink: '/'
         },
