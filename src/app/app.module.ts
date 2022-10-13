@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
 import { KanbanFireComponent } from './kanban-fire/kanban-fire.component';
 import { TaskComponent } from './kanban-fire/task/task.component';
 import { TaskDialogComponent } from './kanban-fire/task-dialog/task-dialog.component';
+import { CountriesComponent } from './countries/countries.component';
 
 @NgModule({
     declarations: [
@@ -47,6 +49,7 @@ import { TaskDialogComponent } from './kanban-fire/task-dialog/task-dialog.compo
         KanbanFireComponent,
         TaskComponent,
         TaskDialogComponent,
+        CountriesComponent,
     ],
     imports: [
         BrowserModule,
@@ -66,6 +69,7 @@ import { TaskDialogComponent } from './kanban-fire/task-dialog/task-dialog.compo
         MatTooltipModule,
         DragDropModule,
         MatDialogModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
