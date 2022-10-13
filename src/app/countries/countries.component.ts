@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountriesService } from './countries.service';
+import { Country } from './types';
 
 @Component({
     selector: 'app-countries',
@@ -7,7 +8,7 @@ import { CountriesService } from './countries.service';
     styleUrls: ['./countries.component.css']
 })
 export class CountriesComponent implements OnInit {
-    countries: any;
+    countries: Country[] | null;
     isLoading = true;
     error = false;
 
@@ -23,7 +24,7 @@ export class CountriesComponent implements OnInit {
                 this.countries = data;
                 this.isLoading = false;
             },
-            error: (error) => {
+            error: () => {
                 this.error = true;
                 this.isLoading = false;
             }
