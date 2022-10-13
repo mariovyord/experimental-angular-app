@@ -1,3 +1,11 @@
+export interface NormalizedCountry {
+    flag: string,
+    name: string;
+    capital: string;
+    region: string;
+    population: number;
+}
+
 export interface Country {
     name: Name;
     capital: string[];

@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -70,6 +71,7 @@ import { CountriesComponent } from './countries/countries.component';
         DragDropModule,
         MatDialogModule,
         HttpClientModule,
+        MatTableModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
