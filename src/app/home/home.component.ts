@@ -23,11 +23,11 @@ export class HomeComponent {
             routerLink: '/kanban'
         },
         {
-            title: 'Hello World',
+            title: 'Countries List',
             subtitle: 'Hello... to the world',
             imageUrl: 'https://cdn.pixabay.com/photo/2022/10/07/09/24/little-panda-7504633_960_720.jpg',
             content: 'Not much, but from the heart.',
-            routerLink: '/'
+            routerLink: '/countries'
         },
     ]
 
