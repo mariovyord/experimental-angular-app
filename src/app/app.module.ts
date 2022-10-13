@@ -19,9 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
-
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { HomeComponent } from './home/home.component';
 import { TodoInMemoryComponent } from './todo-in-memory/todo-in-memory.component';
@@ -72,6 +72,7 @@ import { CountriesComponent } from './countries/countries.component';
         MatDialogModule,
         HttpClientModule,
         MatTableModule,
+        MatProgressSpinnerModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -12,3 +12,9 @@ table {
     margin: 0 auto;
     max-width: 900px;
 }
+
+.spinner {
+    margin: 0 auto;
+    width: fit-content;
+    padding-top: 50px;
+}
